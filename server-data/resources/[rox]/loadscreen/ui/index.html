@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/loaders.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <div class="wrapper" :style="cssvars" :class="{'background': config.image.active}" v-if="visible">
+        <div class="backGround"></div>
+        <div class="loog">
+          <img class="logox" src="./assets/redmscriptlogo.png" alt="">
+          <div id="loadingpart">
+            <p id="loading-details">Loading Data</p>
+            <div class="load-4" v-if="config.loading.icon == 'wheel' && config.loading.active">
+              <div class="ring-1"></div>
+            </div>
+          </div>
+        </div>
+        <video id="videocomp" v-if="config.video.active" width="320" height="240" :controls="false" autoplay playsinline :muted="config.video.mute" :loop="config.video.looped" >
+          <source :src="config.video.source" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div v-if="config.youtube.active">
+          <div id="ytplayer"></div>
+        </div>
+        <video id="videocomp" v-if="config.googledrive.active" width="320" height="240" :controls="false" autoplay playsinline :muted="config.googledrive.mute" :loop="config.googledrive.looped" >
+          <source :src="`https://drive.google.com/uc?export=download&id=${config.googledrive.source}`" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <!-- <div class="elapsed" v-if="config.timeelapsed">{{elapsedtime}}</div> -->
+        <div class="skip" v-if="config.loadtime.skip && loading == false">{{ config.loadtime.lang }} </div>
+        <div class="load-4" v-if="config.loading.icon == 'wheel' && config.loading.active">
+          <div class="ring-1"></div>
+        </div>
+      </div>
+      <div class="wrapper" :style="cssvars" v-if="config.audio.active && visible">
+        <audio autoplay id="audiocomp">
+          <source :src="config.audio.source" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<script src="../config.js"></script>
+<script src="vendor/vue.js"></script>
+<script src="app.js"></script>

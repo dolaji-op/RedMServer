@@ -1,0 +1,10 @@
+CREATE TABLE `farmanimals` (
+  `identifier` varchar(60) NOT NULL,
+  `charid` int(5) NOT NULL,
+  `animalid` int(10) NOT NULL,
+  `model` BIGINT(32) NOT NULL,
+  `preset` int(2) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `xp` int(5) NOT NULL,
+  `price` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

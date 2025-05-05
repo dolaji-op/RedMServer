@@ -1,0 +1,152 @@
+@font-face {
+  font-family: rdr;
+  src: url(../fonts/rdrlino-regular-webfont.woff);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#app {
+  font-family: rdr;
+  touch-action: manipulation;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color);
+}
+
+.backGround{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100000000000;
+  background-image: url('../rdrloading2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.loog{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  z-index: 1000000000000;
+  top: 58%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.logox{
+  width: 351px;
+  height: 170px;
+  object-fit: contain;
+}
+
+
+#loadingpart{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#loading-details{
+    color: white;
+    /* z-index: 1000000;
+    position: absolute;
+    left: 10%;
+    top: 62%; */
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.elapsed {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 2.5rem;
+  z-index: 1000000000000;
+}
+
+.skip {
+  font-size: 30px;
+  color: white;
+  vertical-align: middle;
+  width: 80%;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.background {
+  background-color: var(--backgroundcolor);
+  background-size: cover;
+  background-image: var(--backgroundimage);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  z-index: 999999;
+}
+
+@media screen and (min-width: 2560px) and (max-width: 3839px) and (min-height: 1440px) and (max-height: 2159px) {
+
+  .loog{
+    height: 500px !important;
+    width: 500px !important;
+  }
+  .logox{
+    width: 500px !important;
+    height: 230px !important;
+  }
+
+}
+
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+  #loading-details{
+    color: white !important;
+    font-size: 36px !important;
+    margin-bottom: 10px !important;
+  }
+  .loog{
+    height: 600px !important;
+    width: 600px !important;
+  }
+  .logox{
+    width: 600px !important;
+    height: 270px !important;
+  }
+  .ring-1{
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+}

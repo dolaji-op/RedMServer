@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "RDRLino-Regular";
+  src: url(assets/RDRLino-Regular.ttf);
+}
+
+* {
+  overflow: hidden;
+  font-family: 'RDRLino-Regular', serif;
+  font-size: 3.8vh;
+  color: #e6d8c3;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#app {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.managermenu, .OilMenu , .supplymenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 15vh;
+}
+
+.mainmenuimg, .mainmenuimg2 {
+  opacity: 0.92;
+  border-radius: 2vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  border: 2px solid #483c32;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#app button {
+
+  background: rgba(43, 29, 14, 0.85);
+  border: 1px solid #816b4b;
+  padding: 1vh 2vh;
+  border-radius: 0.5vh;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 35vh;
+  text-align: center;
+  margin: 1vh 1vh;
+  z-index: 1;
+}
+
+#app button:hover {
+  background: rgba(139, 69, 19, 0.9);
+  border-color: #c8b190;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+
+/* #app .menubutton1 { top: 40%; }
+#app .menubutton2 { top: 52%; }
+#app .menubutton3 { top: 30%; }
+#app .menubutton4 { top: 42%; }
+#app .menubutton5 { top: 54%; }
+#app .menubutton6 { top: 25%; }
+#app .menubutton7 { top: 37%; } */
+#app .exitbutton {
+  top: 80%;
+  background: rgba(90, 30, 20, 0.85);
+}
+
+#app .exitbutton:hover {
+  background: rgba(139, 0, 0, 0.9);
+}
+
+span {
+  color: #ffd700;
+  margin-left: 1vh;
+}
